@@ -11,6 +11,7 @@
 		5E66F943292BF57B0072B381 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E66F942292BF57B0072B381 /* ContentView.swift */; };
 		5E66F945292BF57D0072B381 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E66F944292BF57D0072B381 /* Assets.xcassets */; };
 		5E66F948292BF57D0072B381 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E66F947292BF57D0072B381 /* Preview Assets.xcassets */; };
+		5E66F94F292C091A0072B381 /* OnBoarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E66F94E292C091A0072B381 /* OnBoarding.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		5E66F942292BF57B0072B381 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5E66F944292BF57D0072B381 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E66F947292BF57D0072B381 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5E66F94E292C091A0072B381 /* OnBoarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoarding.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +54,7 @@
 			isa = PBXGroup;
 			children = (
 				5E66F940292BF57B0072B381 /* EmployeeDirectoryApp.swift */,
+				5E66F94E292C091A0072B381 /* OnBoarding.swift */,
 				5E66F942292BF57B0072B381 /* ContentView.swift */,
 				5E66F944292BF57D0072B381 /* Assets.xcassets */,
 				5E66F946292BF57D0072B381 /* Preview Content */,
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E66F943292BF57B0072B381 /* ContentView.swift in Sources */,
+				5E66F94F292C091A0072B381 /* OnBoarding.swift in Sources */,
 				5E66F941292BF57B0072B381 /* EmployeeDirectoryApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
