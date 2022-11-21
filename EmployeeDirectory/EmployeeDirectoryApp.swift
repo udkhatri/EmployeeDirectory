@@ -13,7 +13,7 @@ struct EmployeeDirectoryApp: App {
     var body: some Scene {
         WindowGroup {
             if isUserOnboarded{
-                ContentView()
+                BottomTabView()
             }
             else{
                 OnBoarding()
