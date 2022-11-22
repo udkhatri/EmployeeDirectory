@@ -14,10 +14,17 @@ struct BottomTabView: View {
                 .tabItem {
                     Label("Employees", systemImage: "person.3")
                 }
-            SettingsView()
+            SettingsView(viewModel: SettingViewModel())
                 .tabItem {
                     Label("Setting", systemImage: "gear")
                 }
+        }
+        .onAppear() {
+            let appearance = UITabBarAppearance()
+            appearance.backgroundEffect = UIBlurEffect(style: .light)
+            appearance.backgroundColor = UIColor(Color.gray.opacity(0.0))
+            UITabBar.appearance().standardAppearance = appearance
+            UITabBar.appearance().scrollEdgeAppearance = appearance
         }
     }
 }
