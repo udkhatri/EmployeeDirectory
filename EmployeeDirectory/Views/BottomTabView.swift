@@ -10,7 +10,7 @@ import SwiftUI
 struct BottomTabView: View {
     var body: some View {
         TabView {
-            EmployeeListView()
+            EmployeeListView(viewModel: EmployeeListViewModel())
                 .tabItem {
                     Label("Employees", systemImage: "person.3")
                 }

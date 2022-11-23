@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  EmployeeDirectory
+
+  Created by Uday Khatri on 2022-11-21.
+  
+*/
+"settting_view_navigation_title" = "समायोजन";
+"name" = "नाम";
+"bundle_info" = "बंडल सूचना";
+"version" = "संस्करण";
+"id" = "पहचानकर्ता";
+"dev_by" = "विकसित द्वारा";
+"dev_name" = "उदय खत्री";
+"bundle_id_not_found" = "बंडल आईडी नहीं मिला";

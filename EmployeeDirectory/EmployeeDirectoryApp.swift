@@ -16,7 +16,7 @@ struct EmployeeDirectoryApp: App {
                 BottomTabView()
             }
             else{
-                OnBoarding()
+                OnBoardingView()
             }
         }
     }

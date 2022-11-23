@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  EmployeeDirectory
+
+  Created by Uday Khatri on 2022-11-21.
+  
+*/
+"settting_view_navigation_title" = "Setting";
+"name" = "Name";
+"bundle_info" = "Bundle Information";
+"version" = "Version";
+"id" = "Identifier";
+"dev_by" = "Developed By";
+"dev_name" = "Uday Khatri";
+"bundle_id_not_found" = "Bundle id not found";

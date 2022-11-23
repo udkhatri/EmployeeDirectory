@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct OnBoarding: View {
+struct OnBoardingView: View {
     var body: some View {
         VStack(spacing: 20){
             Spacer()
@@ -40,6 +40,6 @@ private var bottomButton: some View {
 }
 struct OnBoarding_Previews: PreviewProvider {
     static var previews: some View {
-        OnBoarding()
+        OnBoardingView()
     }
 }
