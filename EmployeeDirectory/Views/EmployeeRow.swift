@@ -9,6 +9,7 @@ import SwiftUI
 
 struct EmployeeRow: View {
     var employee: Employee
+    @Environment(\.colorScheme) var colorScheme
     var body: some View {
 //        NavigationLink( destination: "Employee Details") {
         HStack{
@@ -33,9 +34,9 @@ struct EmployeeRow: View {
         .padding(10)
         
         .background {
-            Color.white
+            colorScheme == .dark ? Color(UIColor.darkGray) : Color.white
         }
-        .cornerRadius(10)
+        .cornerRadius(15)
         .shadow(radius: 3, x: 2, y: 3)
 
 //        }

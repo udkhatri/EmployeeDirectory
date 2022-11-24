@@ -11,16 +11,21 @@ struct EmployeeListView: View {
     @ObservedObject var viewModel: EmployeeListViewModel
     
     fileprivate func createList() -> some View {
-        return List(viewModel.employees) { employee in
+        return List(viewModel.employeeList) { employee in
             EmployeeRow(employee: employee)
                 .listRowSeparator(.hidden)
         }
-        .background()
         .scrollContentBackground(.hidden)
         .navigationTitle("Employee")
         .listStyle(.plain)
         .animation(.default, value: viewModel.employees)
-       
+        .searchable(text: $viewModel.searchTerm,
+                    placement: .navigationBarDrawer(displayMode: .automatic),
+                    prompt: "Search for employees")
+        .onChange(of: viewModel.searchTerm, perform: { newValue in
+            print("New Value: \(newValue)")
+            viewModel.filterSearchResults()
+        })
     }
     var body: some View {
         NavigationView {

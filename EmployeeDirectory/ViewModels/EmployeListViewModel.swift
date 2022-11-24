@@ -7,14 +7,8 @@
 
 import SwiftUI
 
-struct EmployeListViewModel: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
+final class EmployeListViewModel: ObservableObject {
+    // MARK: - Observable properties
+    @ObservedObject var store: SandwichStore
 }
 
-struct EmployeListViewModel_Previews: PreviewProvider {
-    static var previews: some View {
-        EmployeListViewModel()
-    }
-}
