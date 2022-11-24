@@ -12,6 +12,7 @@
 		5E58B120292EB17C00A2B099 /* EmployeeListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E58B11F292EB17C00A2B099 /* EmployeeListModel.swift */; };
 		5E58B122292EB1E100A2B099 /* EmployeeListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E58B121292EB1E100A2B099 /* EmployeeListService.swift */; };
 		5E58B126292ECA2C00A2B099 /* EmployeeRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E58B125292ECA2C00A2B099 /* EmployeeRow.swift */; };
+		5E58B128292EF88100A2B099 /* EmployeeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E58B127292EF88100A2B099 /* EmployeeView.swift */; };
 		5E66F941292BF57B0072B381 /* EmployeeDirectoryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E66F940292BF57B0072B381 /* EmployeeDirectoryApp.swift */; };
 		5E66F945292BF57D0072B381 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E66F944292BF57D0072B381 /* Assets.xcassets */; };
 		5E66F948292BF57D0072B381 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E66F947292BF57D0072B381 /* Preview Assets.xcassets */; };
@@ -29,6 +30,7 @@
 		5E58B11F292EB17C00A2B099 /* EmployeeListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListModel.swift; sourceTree = "<group>"; };
 		5E58B121292EB1E100A2B099 /* EmployeeListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListService.swift; sourceTree = "<group>"; };
 		5E58B125292ECA2C00A2B099 /* EmployeeRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeRow.swift; sourceTree = "<group>"; };
+		5E58B127292EF88100A2B099 /* EmployeeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeView.swift; sourceTree = "<group>"; };
 		5E66F93D292BF57B0072B381 /* EmployeeDirectory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmployeeDirectory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E66F940292BF57B0072B381 /* EmployeeDirectoryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDirectoryApp.swift; sourceTree = "<group>"; };
 		5E66F944292BF57D0072B381 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				5E66F957292C26200072B381 /* EmployeeListView.swift */,
 				5E66F959292C262E0072B381 /* SettingsView.swift */,
 				5E58B125292ECA2C00A2B099 /* EmployeeRow.swift */,
+				5E58B127292EF88100A2B099 /* EmployeeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 				5E58B126292ECA2C00A2B099 /* EmployeeRow.swift in Sources */,
 				5E58B120292EB17C00A2B099 /* EmployeeListModel.swift in Sources */,
 				5E58B0FD292D987E00A2B099 /* SpamWordsServiceError.swift in Sources */,
+				5E58B128292EF88100A2B099 /* EmployeeView.swift in Sources */,
 				5E66F968292C35F50072B381 /* SettingViewModel.swift in Sources */,
 				5E58B122292EB1E100A2B099 /* EmployeeListService.swift in Sources */,
 				5E66F958292C26200072B381 /* EmployeeListView.swift in Sources */,

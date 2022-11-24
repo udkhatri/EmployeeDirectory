@@ -11,7 +11,7 @@ struct EmployeeRow: View {
     var employee: Employee
     @Environment(\.colorScheme) var colorScheme
     var body: some View {
-//        NavigationLink( destination: "Employee Details") {
+        NavigationLink( destination: self) {
         HStack{
             AsyncImage(url: URL(string: employee.photoUrlSmall!)) { image in
                 image.resizable()
@@ -23,6 +23,8 @@ struct EmployeeRow: View {
             .frame(width: 60, height: 60 )
             VStack(alignment: .leading) {
                 Text(employee.fullName)
+                    .foregroundColor(.accentColor)
+                    .font(.headline)
                 Text("Team: \(employee.team)")
                     .font(.subheadline)
                     .foregroundColor(.secondary)
@@ -32,13 +34,12 @@ struct EmployeeRow: View {
             
         }
         .padding(10)
-        
         .background {
             colorScheme == .dark ? Color(UIColor.darkGray) : Color.white
         }
         .cornerRadius(15)
         .shadow(radius: 3, x: 2, y: 3)
 
-//        }
+        }
     }
 }

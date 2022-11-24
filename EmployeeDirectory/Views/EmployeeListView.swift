@@ -15,23 +15,23 @@ struct EmployeeListView: View {
             EmployeeRow(employee: employee)
                 .listRowSeparator(.hidden)
         }
+        .padding(0.0)
         .scrollContentBackground(.hidden)
-        .navigationTitle("Employee")
+        .navigationTitle(viewModel.navTitle)
         .listStyle(.plain)
-        .animation(.default, value: viewModel.employees)
+        .animation(.easeInOut, value: viewModel.employees)
         .searchable(text: $viewModel.searchTerm,
                     placement: .navigationBarDrawer(displayMode: .automatic),
-                    prompt: "Search for employees")
+                    prompt: viewModel.searchbarPlaceholder)
         .onChange(of: viewModel.searchTerm, perform: { newValue in
-            print("New Value: \(newValue)")
             viewModel.filterSearchResults()
         })
     }
     var body: some View {
         NavigationView {
             if viewModel.isLoading {
-                ProgressView("Fetching Employees, please wait...")
-                    .progressViewStyle(CircularProgressViewStyle(tint: .red))
+                ProgressView(viewModel.loadingText)
+                    .progressViewStyle(CircularProgressViewStyle(tint: .accentColor))
             } else {
                 createList()
             }

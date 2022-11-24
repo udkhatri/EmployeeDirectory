@@ -12,11 +12,11 @@ struct BottomTabView: View {
         TabView {
             EmployeeListView(viewModel: EmployeeListViewModel())
                 .tabItem {
-                    Label("Employees", systemImage: "person.3")
+                    Label("employee_view_navigation_title", systemImage: "person.3")
                 }
             SettingsView(viewModel: SettingViewModel())
                 .tabItem {
-                    Label("Setting", systemImage: "gear")
+                    Label("settting_view_navigation_title", systemImage: "gear")
                 }
         }
         .onAppear() {

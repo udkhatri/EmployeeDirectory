@@ -7,6 +7,12 @@ final class EmployeeListViewModel: ObservableObject {
     @Published var searchTerm: String = ""
     @Published var searchResults: [Employee] = []
     
+    /// Locallized strings used in Employees screen
+    let navTitle: String = NSLocalizedString("employee_view_navigation_title", comment: "Employee")
+    let team: String = NSLocalizedString("team", comment: "team")
+    let loadingText: String = NSLocalizedString("loading_text", comment: "Fetching Employees list, please wait")
+    let searchbarPlaceholder: String = NSLocalizedString("searchbar_content", comment: "Search for employee")
+    
     /// To display data, either search result or intiaal data
     var employeeList: [Employee] {
         return searchTerm.isEmpty ? employees : searchResults
@@ -19,6 +25,7 @@ final class EmployeeListViewModel: ObservableObject {
     func filterSearchResults() {
         searchResults = employees.filter({ $0.fullName.localizedCaseInsensitiveContains(searchTerm)})
     }
+    
     @MainActor
     /// Try to fetch data from service
     func fetchEmployees() async {

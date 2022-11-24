@@ -5,6 +5,7 @@
   Created by Uday Khatri on 2022-11-21.
   
 */
+// For employee view
 "settting_view_navigation_title" = "समायोजन";
 "name" = "नाम";
 "bundle_info" = "बंडल सूचना";
@@ -13,3 +14,9 @@
 "dev_by" = "विकसित द्वारा";
 "dev_name" = "उदय खत्री";
 "bundle_id_not_found" = "बंडल आईडी नहीं मिला";
+
+//For Employees view
+"employee_view_navigation_title" = "कर्मचारी";
+"team" = "टीम";
+"searchbar_content" = "कर्मचारी की तलाश करें";
+"loading_text" = "कर्मचारियों की सूची प्राप्त की जा रही है, कृपया प्रतीक्षा करें...";

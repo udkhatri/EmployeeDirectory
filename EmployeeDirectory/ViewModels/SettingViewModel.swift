@@ -1,7 +1,7 @@
 import SwiftUI
 
 final class SettingViewModel: ObservableObject {
-    let navTitle: String = NSLocalizedString("settting_view_navigation_title", comment: "Languages")
+    let navTitle: String = NSLocalizedString("settting_view_navigation_title", comment: "Settings")
     let appName = Bundle.main.object(forInfoDictionaryKey: "CFBundleName") as! String
     let bundleId = Bundle.main.bundleIdentifier ?? "Bundle id not found"
     let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String
