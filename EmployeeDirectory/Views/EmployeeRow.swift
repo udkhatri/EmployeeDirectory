@@ -10,8 +10,9 @@ import SwiftUI
 struct EmployeeRow: View {
     var employee: Employee
     @Environment(\.colorScheme) var colorScheme
+    
     var body: some View {
-        NavigationLink( destination: self) {
+        NavigationLink( destination: EmployeeView()) {
         HStack{
             AsyncImage(url: URL(string: employee.photoUrlSmall!)) { image in
                 image.resizable()

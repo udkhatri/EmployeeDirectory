@@ -16,10 +16,11 @@ struct EmployeeListView: View {
                 .listRowSeparator(.hidden)
         }
         .padding(0.0)
+        .scrollIndicators(.hidden)
         .scrollContentBackground(.hidden)
         .navigationTitle(viewModel.navTitle)
         .listStyle(.plain)
-        .animation(.easeInOut, value: viewModel.employees)
+        .animation(.linear, value: viewModel.employeeList)
         .searchable(text: $viewModel.searchTerm,
                     placement: .navigationBarDrawer(displayMode: .automatic),
                     prompt: viewModel.searchbarPlaceholder)
