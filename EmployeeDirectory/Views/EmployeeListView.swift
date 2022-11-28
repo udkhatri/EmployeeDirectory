@@ -15,6 +15,26 @@ struct EmployeeListView: View {
             EmployeeRow(employee: employee)
                 .listRowSeparator(.hidden)
         }
+        .overlay(Group {
+            if viewModel.employeeList.isEmpty {
+                VStack{
+                    Rectangle()
+                        .frame(width: 300, height: 200)
+                        .cornerRadius(20)
+                        .shadow(color: .gray, radius: 3)
+                        .foregroundColor(Color(UIColor.systemGray4))
+                        .overlay(alignment: .center, content: {
+                            Text("Ups! Looks like the employee list is empty.")
+                                .font(.title2)
+                                .fontWeight(.bold)
+                                .foregroundColor(.gray)
+                                .padding()
+                        })
+                        .padding(40)
+                    Spacer()
+                }
+            }
+        })
         .padding(0.0)
         .scrollIndicators(.hidden)
         .scrollContentBackground(.hidden)

@@ -53,7 +53,7 @@ struct OnBoardingView: View {
             .cornerRadius(10)
             .padding(20)
             .onTapGesture {
-                UserDefaults.standard.set(true, forKey: "is_user_onboareded")
+                viewModel.changeUserOnboardingState()
             }
     }
 }
