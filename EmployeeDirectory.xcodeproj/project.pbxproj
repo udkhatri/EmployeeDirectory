@@ -25,6 +25,7 @@
 		5E66F968292C35F50072B381 /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E66F967292C35F50072B381 /* SettingViewModel.swift */; };
 		5EC8FF61293406B1005A5526 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC8FF60293406B1005A5526 /* SwiftUIView.swift */; };
 		5EC8FF6429355371005A5526 /* EmployeeCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC8FF6329355371005A5526 /* EmployeeCacheManager.swift */; };
+		5EC8FF6629355791005A5526 /* EmployeeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC8FF6529355791005A5526 /* EmployeeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		5E66F967292C35F50072B381 /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
 		5EC8FF60293406B1005A5526 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		5EC8FF6329355371005A5526 /* EmployeeCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeCacheManager.swift; sourceTree = "<group>"; };
+		5EC8FF6529355791005A5526 /* EmployeeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 			children = (
 				5E66F967292C35F50072B381 /* SettingViewModel.swift */,
 				5E58B0F7292D980200A2B099 /* EmployeeListViewModel.swift */,
+				5EC8FF6529355791005A5526 /* EmployeeViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 				5E66F95E292C27B30072B381 /* BottomTabView.swift in Sources */,
 				5E58B0F8292D980200A2B099 /* EmployeeListViewModel.swift in Sources */,
 				5E66F95A292C262E0072B381 /* SettingsView.swift in Sources */,
+				5EC8FF6629355791005A5526 /* EmployeeViewModel.swift in Sources */,
 				5E58B12A292F0D8E00A2B099 /* ImageLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

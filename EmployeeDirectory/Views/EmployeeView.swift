@@ -9,7 +9,8 @@ import SwiftUI
 
 struct EmployeeView: View {
     var EmployeeDetails: Employee
-   
+    @StateObject var viewModel: EmployeeViewModel
+    
     fileprivate func PlaceholderImageView(isNill:Bool) -> some View {
         return Rectangle()
             .foregroundColor(Color(uiColor: .systemGray2))
@@ -17,7 +18,7 @@ struct EmployeeView: View {
             .overlay(
                 VStack{
                     if isNill {
-                        Text("No Image Found")
+                        Text(viewModel.imgNotFoundText)
                             .font(.title)
                             .foregroundColor(.gray)
                             .fontWeight(.semibold)
@@ -86,7 +87,7 @@ struct EmployeeView: View {
                     }
                     
                     // Contact Info section
-                    TitleText(text: "Contact Information")
+                    TitleText(text: viewModel.contactInfotext)
                     // Phone number
                     ContactInfoRow(icon: "phone.fill", content: EmployeeDetails.phoneNumber!, tintColor: Color(uiColor: .systemMint))
                     // Email Id

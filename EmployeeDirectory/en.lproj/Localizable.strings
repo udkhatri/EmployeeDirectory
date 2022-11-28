@@ -15,8 +15,12 @@
 "dev_name" = "Uday Khatri";
 "bundle_id_not_found" = "Bundle id not found";
 
-//For Employees view
+//For EmployeeList view
 "employee_view_navigation_title" = "Employee";
 "team" = "Team";
 "searchbar_content" = "Search for employee";
 "loading_text" = "Fetching Employees, please wait...";
+
+//For Employee view
+"img_not_found" = "No Image Found";
+"contact_info" = "Contact Information";
