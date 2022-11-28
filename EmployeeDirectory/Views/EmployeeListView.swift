@@ -27,6 +27,9 @@ struct EmployeeListView: View {
         .onChange(of: viewModel.searchTerm, perform: { newValue in
             viewModel.filterSearchResults()
         })
+        .refreshable {
+            viewModel.getEmployeesFromCache()
+        }
     }
     var body: some View {
         NavigationView {
