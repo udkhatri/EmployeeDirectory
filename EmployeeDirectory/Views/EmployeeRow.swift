@@ -12,7 +12,7 @@ struct EmployeeRow: View {
     @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
-        NavigationLink( destination: EmployeeView()) {
+        NavigationLink( destination: EmployeeView(EmployeeDetails: employee)) {
         HStack{
             AsyncImage(url: URL(string: employee.photoUrlSmall!)) { image in
                 image.resizable()

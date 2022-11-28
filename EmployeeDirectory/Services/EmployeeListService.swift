@@ -23,11 +23,9 @@ struct EmployeeListService: EmployeeListServiceType {
             return nil
         }
         do {
-            print("Here is the url",url)
             let (data, _) = try await URLSession
                 .shared
                 .data(from: url)
-            print("Here is the data",try decoder.decode(EmployeeList.self, from: data))
             return try decoder.decode(type, from: data)
         } catch {
             print("got error",error)

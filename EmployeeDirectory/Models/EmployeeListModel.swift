@@ -37,25 +37,26 @@ struct Employee: Identifiable, Codable {
     let photoUrlLarge: String?
     let team: String
     let employeeType: String
+//    let employeeType: EmployeeType  /// <-On adding this line it is throwing this perticular error
+
+    enum EmployeeType: String {
+        case fullTime = "FULL_TIME"
+        case partTime = "PART_TIME"
+        case contractor = "CONTRACTOR"
+        
+        var employeeTeam: String {
+            switch self {
+            case .fullTime:
+                return "Full Time"
+            case .partTime:
+                return "Part Time"
+            case .contractor:
+                return "Contractor"
+            }
+        }
+    }
     
-    /*
-    init(fullName: String, phoneNumber: String, emailAddress: String, photoUrlSmall: String, photoUrlLarge: String, employeeType: String) {
-        self.fullName = fullName
-        self.phoneNumber = phoneNumber
-        self.emailAddress = emailAddress
-        self.photoUrlSmall = photoUrlSmall
-        self.photoUrlLarge = photoUrlLarge
-        self.employeeType = employeeType
-    }
-    enum CodingKeys: String, CodingKey {
-        case fullName = "full_name"
-        case phoneNumber = "phone_number"
-        case emailAddress = "email_address"
-        case photoUrlSmall = "photo_url_small"
-        case photoUrlLarge = "photo_url_large"
-        case employeeType = "employee_type"
-    }
-     */
 }
+
 extension Employee: Equatable {
 }
