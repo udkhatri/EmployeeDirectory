@@ -5,6 +5,7 @@
   Created by Uday Khatri on 2022-11-21.
   
 */
+
 // For settings view
 "settting_view_navigation_title" = "Settings";
 "name" = "Name";
@@ -24,3 +25,8 @@
 //For Employee view
 "img_not_found" = "No Image Found";
 "contact_info" = "Contact Information";
+
+// For onboarding View
+"onboarding_title" = "Employee List";
+"onboarding_content" = "This application shows the list of employees who are fetched from the network. You can search employees by name and view their details by pressing them.";
+"onboarding_button" = "Continue";

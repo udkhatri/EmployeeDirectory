@@ -24,3 +24,8 @@
 //For Employee view
 "img_not_found" = "कोई छवि नहीं मिली";
 "contact_info" = "संपर्क जानकारी";
+
+// For onboarding View
+"onboarding_title" = "कर्मचारी सूची";
+"onboarding_content" = "यह एप्लिकेशन उन कर्मचारियों की सूची दिखाता है जिन्हें नेटवर्क से लाया गया है। आप कर्मचारियों को नाम से खोज सकते हैं और उन्हें दबाकर उनका विवरण देख सकते हैं।";
+"onboarding_button" = "जारी रखना";

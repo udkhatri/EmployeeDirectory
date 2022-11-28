@@ -9,7 +9,7 @@ import SwiftUI
 
 struct EmployeeView: View {
     var EmployeeDetails: Employee
-    @StateObject var viewModel: EmployeeViewModel
+    @StateObject var viewModel: EmployeeViewModel = EmployeeViewModel()
     
     fileprivate func PlaceholderImageView(isNill:Bool) -> some View {
         return Rectangle()
