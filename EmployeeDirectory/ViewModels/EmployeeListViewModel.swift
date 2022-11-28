@@ -7,6 +7,10 @@ final class EmployeeListViewModel: ObservableObject {
     @Published var searchTerm: String = ""
     @Published var searchResults: [Employee] = []
     
+    /// code related to employee caching initialization
+    let employeeCache = EmployeeCacheManager.instance
+    let cachedEmployeKey = "CACHED_EMPLOYEES"
+    
     /// Locallized strings used in Employees screen
     let navTitle: String = NSLocalizedString("employee_view_navigation_title", comment: "Employee")
     let team: String = NSLocalizedString("team", comment: "team")
@@ -25,13 +29,19 @@ final class EmployeeListViewModel: ObservableObject {
     func filterSearchResults() {
         searchResults = employees.filter({ $0.fullName.localizedCaseInsensitiveContains(searchTerm)})
     }
+    /// getting data from cache and storing it to employee list
+    func getFromCache(){
+        employees = employeeCache.get(key: cachedEmployeKey) ?? []
+        print("employees from cached list", employees)
+    }
     
     @MainActor
     /// Try to fetch data from service
     func fetchEmployees() async {
         do {
             isLoading = true
-            employees = try await service.fetchEmployees()
+            employeeCache.add(employees: try await service.fetchEmployees(), key: cachedEmployeKey) // adding data to cache
+            getFromCache()
             isLoading = false
         }
         catch {

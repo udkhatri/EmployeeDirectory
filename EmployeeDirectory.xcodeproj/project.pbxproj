@@ -24,6 +24,7 @@
 		5E66F963292C33310072B381 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5E66F965292C33310072B381 /* Localizable.strings */; };
 		5E66F968292C35F50072B381 /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E66F967292C35F50072B381 /* SettingViewModel.swift */; };
 		5EC8FF61293406B1005A5526 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC8FF60293406B1005A5526 /* SwiftUIView.swift */; };
+		5EC8FF6429355371005A5526 /* EmployeeCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC8FF6329355371005A5526 /* EmployeeCacheManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		5E66F966292C33370072B381 /* hi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hi; path = hi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5E66F967292C35F50072B381 /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
 		5EC8FF60293406B1005A5526 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		5EC8FF6329355371005A5526 /* EmployeeCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeCacheManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 		5E66F93F292BF57B0072B381 /* EmployeeDirectory */ = {
 			isa = PBXGroup;
 			children = (
+				5EC8FF6229355325005A5526 /* CacheManager */,
 				5E58B0FE292D989600A2B099 /* Models */,
 				5E58B0F9292D983900A2B099 /* Services */,
 				5E66F965292C33310072B381 /* Localizable.strings */,
@@ -137,6 +140,14 @@
 				5E58B0F7292D980200A2B099 /* EmployeeListViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		5EC8FF6229355325005A5526 /* CacheManager */ = {
+			isa = PBXGroup;
+			children = (
+				5EC8FF6329355371005A5526 /* EmployeeCacheManager.swift */,
+			);
+			path = CacheManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,6 +226,7 @@
 				5E58B120292EB17C00A2B099 /* EmployeeListModel.swift in Sources */,
 				5E58B0FD292D987E00A2B099 /* SpamWordsServiceError.swift in Sources */,
 				5E58B128292EF88100A2B099 /* EmployeeView.swift in Sources */,
+				5EC8FF6429355371005A5526 /* EmployeeCacheManager.swift in Sources */,
 				5E66F968292C35F50072B381 /* SettingViewModel.swift in Sources */,
 				5E58B122292EB1E100A2B099 /* EmployeeListService.swift in Sources */,
 				5E66F958292C26200072B381 /* EmployeeListView.swift in Sources */,
