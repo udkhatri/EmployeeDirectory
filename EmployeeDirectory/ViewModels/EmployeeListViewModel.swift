@@ -1,7 +1,7 @@
 import Foundation
 
 final class EmployeeListViewModel: ObservableObject {
-    private let service: EmployeeListServiceType
+    private let service: EmployeeListServiceType 
     @Published private(set) var employees: [Employee] = []
     @Published private(set) var isLoading = true
     @Published var searchTerm: String = ""

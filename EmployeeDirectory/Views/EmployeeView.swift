@@ -76,7 +76,6 @@ struct EmployeeView: View {
                 .shadow(radius: 3, x: 2, y: 3)
                 .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.width)
             }
-            
             ScrollView(){
                 VStack(alignment: .leading){
                     Text(EmployeeDetails.biography ?? "" )

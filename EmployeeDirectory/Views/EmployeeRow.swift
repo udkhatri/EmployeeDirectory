@@ -14,14 +14,24 @@ struct EmployeeRow: View {
     var body: some View {
         NavigationLink( destination: EmployeeView(EmployeeDetails: employee)) {
         HStack{
-            AsyncImage(url: URL(string: employee.photoUrlSmall!)) { image in
-                image.resizable()
-            } placeholder: {
-                ProgressView()
+            AsyncImage(url: URL(string: employee.photoUrlSmall!)) { phase in
+                if let image = phase.image {
+                    image
+                        .resizable()
+                        .cornerRadius(30)
+                        .shadow(radius: 3, x: 2, y: 3)
+                        .frame(width: 60, height: 60 )
+                } else if phase.error != nil {
+                    // Show person icon if there is no Image returend from the API.
+                    Image(systemName: "person.circle.fill")
+                        .resizable()
+                        .cornerRadius(30)
+                        .shadow(radius: 3, x: 2, y: 3)
+                        .frame(width: 60, height: 60 )
+                } else {
+                    ProgressView()
+                }
             }
-            .cornerRadius(30)
-            .shadow(radius: 3, x: 2, y: 3)
-            .frame(width: 60, height: 60 )
             VStack(alignment: .leading) {
                 Text(employee.fullName)
                     .foregroundColor(.accentColor)
