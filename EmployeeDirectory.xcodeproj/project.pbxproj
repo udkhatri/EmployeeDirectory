@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5E58B0F8292D980200A2B099 /* EmployeeListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E58B0F7292D980200A2B099 /* EmployeeListViewModel.swift */; };
-		5E58B0FD292D987E00A2B099 /* SpamWordsServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E58B0FC292D987E00A2B099 /* SpamWordsServiceError.swift */; };
+		5E58B0FD292D987E00A2B099 /* EmployeeListServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E58B0FC292D987E00A2B099 /* EmployeeListServiceError.swift */; };
 		5E58B120292EB17C00A2B099 /* EmployeeListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E58B11F292EB17C00A2B099 /* EmployeeListModel.swift */; };
 		5E58B122292EB1E100A2B099 /* EmployeeListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E58B121292EB1E100A2B099 /* EmployeeListService.swift */; };
 		5E58B126292ECA2C00A2B099 /* EmployeeRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E58B125292ECA2C00A2B099 /* EmployeeRow.swift */; };
@@ -23,7 +23,6 @@
 		5E66F95E292C27B30072B381 /* BottomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E66F95D292C27B30072B381 /* BottomTabView.swift */; };
 		5E66F963292C33310072B381 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5E66F965292C33310072B381 /* Localizable.strings */; };
 		5E66F968292C35F50072B381 /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E66F967292C35F50072B381 /* SettingViewModel.swift */; };
-		5EC8FF61293406B1005A5526 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC8FF60293406B1005A5526 /* SwiftUIView.swift */; };
 		5EC8FF6429355371005A5526 /* EmployeeCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC8FF6329355371005A5526 /* EmployeeCacheManager.swift */; };
 		5EC8FF6629355791005A5526 /* EmployeeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC8FF6529355791005A5526 /* EmployeeViewModel.swift */; };
 		5EC8FF6829356391005A5526 /* OnBoardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC8FF6729356391005A5526 /* OnBoardingViewModel.swift */; };
@@ -31,7 +30,7 @@
 
 /* Begin PBXFileReference section */
 		5E58B0F7292D980200A2B099 /* EmployeeListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListViewModel.swift; sourceTree = "<group>"; };
-		5E58B0FC292D987E00A2B099 /* SpamWordsServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpamWordsServiceError.swift; sourceTree = "<group>"; };
+		5E58B0FC292D987E00A2B099 /* EmployeeListServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListServiceError.swift; sourceTree = "<group>"; };
 		5E58B11F292EB17C00A2B099 /* EmployeeListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListModel.swift; sourceTree = "<group>"; };
 		5E58B121292EB1E100A2B099 /* EmployeeListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListService.swift; sourceTree = "<group>"; };
 		5E58B125292ECA2C00A2B099 /* EmployeeRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeRow.swift; sourceTree = "<group>"; };
@@ -48,7 +47,6 @@
 		5E66F964292C33310072B381 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5E66F966292C33370072B381 /* hi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hi; path = hi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5E66F967292C35F50072B381 /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
-		5EC8FF60293406B1005A5526 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		5EC8FF6329355371005A5526 /* EmployeeCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeCacheManager.swift; sourceTree = "<group>"; };
 		5EC8FF6529355791005A5526 /* EmployeeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeViewModel.swift; sourceTree = "<group>"; };
 		5EC8FF6729356391005A5526 /* OnBoardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewModel.swift; sourceTree = "<group>"; };
@@ -69,7 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				5E58B121292EB1E100A2B099 /* EmployeeListService.swift */,
-				5E58B0FC292D987E00A2B099 /* SpamWordsServiceError.swift */,
+				5E58B0FC292D987E00A2B099 /* EmployeeListServiceError.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -78,7 +76,6 @@
 			isa = PBXGroup;
 			children = (
 				5E58B11F292EB17C00A2B099 /* EmployeeListModel.swift */,
-				5EC8FF60293406B1005A5526 /* SwiftUIView.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -230,13 +227,12 @@
 				5E66F94F292C091A0072B381 /* OnBoardingView.swift in Sources */,
 				5E58B126292ECA2C00A2B099 /* EmployeeRow.swift in Sources */,
 				5E58B120292EB17C00A2B099 /* EmployeeListModel.swift in Sources */,
-				5E58B0FD292D987E00A2B099 /* SpamWordsServiceError.swift in Sources */,
+				5E58B0FD292D987E00A2B099 /* EmployeeListServiceError.swift in Sources */,
 				5E58B128292EF88100A2B099 /* EmployeeView.swift in Sources */,
 				5EC8FF6429355371005A5526 /* EmployeeCacheManager.swift in Sources */,
 				5E66F968292C35F50072B381 /* SettingViewModel.swift in Sources */,
 				5E58B122292EB1E100A2B099 /* EmployeeListService.swift in Sources */,
 				5E66F958292C26200072B381 /* EmployeeListView.swift in Sources */,
-				5EC8FF61293406B1005A5526 /* SwiftUIView.swift in Sources */,
 				5E66F941292BF57B0072B381 /* EmployeeDirectoryApp.swift in Sources */,
 				5E66F95E292C27B30072B381 /* BottomTabView.swift in Sources */,
 				5E58B0F8292D980200A2B099 /* EmployeeListViewModel.swift in Sources */,

@@ -22,11 +22,11 @@ import Foundation
 //  ...
 //]
 
-struct EmployeeList: Codable {
+struct EmployeeList: Decodable {
     let employees: [Employee]
 }
 
-struct Employee: Identifiable, Codable {
+struct Employee: Identifiable, Decodable {
     var id: String { uuid }
     let uuid: String
     let fullName: String
@@ -36,26 +36,27 @@ struct Employee: Identifiable, Codable {
     let photoUrlSmall: String?
     let photoUrlLarge: String?
     let team: String
-    let employeeType: String
-//    let employeeType: EmployeeType  /// <-On adding this line it is throwing this perticular error
-
-    enum EmployeeType: String {
+    let employeeType: EmployeeType
+    
+    /// Enum handling employee type constants
+    enum EmployeeType: String, Decodable {
         case fullTime = "FULL_TIME"
         case partTime = "PART_TIME"
         case contractor = "CONTRACTOR"
         
-        var employeeTeam: String {
-            switch self {
-            case .fullTime:
+        func returnEmpType() -> String {
+            switch self.rawValue {
+            case "FULL_TIME":
                 return "Full Time"
-            case .partTime:
+            case "PART_TIME":
                 return "Part Time"
-            case .contractor:
+            case "CONTRACTOR":
                 return "Contractor"
+            default:
+                return "No type"
             }
         }
     }
-    
 }
 
 extension Employee: Equatable {

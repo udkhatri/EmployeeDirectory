@@ -16,7 +16,7 @@ struct EmployeeListView: View {
                 .listRowSeparator(.hidden)
         }
         .overlay(Group {
-            if viewModel.employeeList.isEmpty {
+            if !viewModel.isLoading && viewModel.employeeList.isEmpty {
                 VStack{
                     Rectangle()
                         .frame(width: 300, height: 200)

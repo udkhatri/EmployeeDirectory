@@ -22,7 +22,6 @@ class EmployeeCacheManager {
         employeeListCache.setObject(employees as NSArray, forKey: key as NSString)
         print("Added to cache!")
     }
-    
     func remove(key: String){
         employeeListCache.removeObject(forKey: key as NSString)
         print("Cache cleared!")

@@ -37,6 +37,4 @@ struct EmployeeListService: EmployeeListServiceType {
         return try await fetch(type: EmployeeList.self, from: Paths.EmployeeListPath)?
             .employees ?? []
     }
-    
-    
 }

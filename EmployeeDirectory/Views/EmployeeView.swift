@@ -82,7 +82,7 @@ struct EmployeeView: View {
                     Text(EmployeeDetails.biography ?? "" )
                         .padding(10)
                     HStack{
-                        InfoView(text: EmployeeDetails.employeeType, tintColor: Color.indigo)
+                        InfoView(text: EmployeeDetails.employeeType.returnEmpType(), tintColor: Color.indigo)
                         InfoView(text: EmployeeDetails.team, tintColor: Color.orange)
                     }
                     
