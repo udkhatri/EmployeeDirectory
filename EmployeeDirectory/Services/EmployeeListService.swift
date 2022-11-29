@@ -20,21 +20,29 @@ struct EmployeeListService: EmployeeListServiceType {
     
     func fetch<T: Decodable>(type: T.Type, from urlString: String) async throws -> T? {
         guard let url = URL(string: urlString) else {
-            return nil
+            print("Bad one....")
+            throw ApiError.invalidRequest("Unexpected server response")
         }
-        do {
-            let (data, _) = try await URLSession
-                .shared
-                .data(from: url)
-            return try decoder.decode(type, from: data)
-        } catch {
-            print("got error",error)
-            return nil
+        let (data, response) = try await URLSession
+            .shared
+            .data(from: url)
+        
+        guard let statusCode = (response as? HTTPURLResponse)?.statusCode else {
+            throw ApiError.invalidResponse("Unexpected server response")
         }
+        
+        if statusCode == 403 {
+            throw ApiError.noInternet("Looks like your internet is turned off.")
+        }
+        
+        if statusCode > 299 {
+            throw ApiError.invalidResponse("Server error code \(statusCode)")
+        }
+        return try decoder.decode(type, from: data)
     }
     
     func fetchEmployees() async throws -> [Employee] {
-        return try await fetch(type: EmployeeList.self, from: Paths.EmployeeListPath)?
-            .employees ?? []
+            return try await fetch(type: EmployeeList.self, from: Paths.EmployeeListPath)?
+                .employees ?? []
     }
 }

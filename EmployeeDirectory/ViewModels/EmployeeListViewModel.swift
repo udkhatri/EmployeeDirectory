@@ -4,6 +4,14 @@ final class EmployeeListViewModel: ObservableObject {
     private let service: EmployeeListServiceType 
     @Published private(set) var employees: [Employee] = []
     @Published private(set) var isLoading = true
+    @Published var isError = false
+    
+    enum State {
+        case na
+        case failed(error: Error)
+    }
+    
+    @Published private(set) var state: State = .na
     @Published var searchTerm: String = ""
     @Published var searchResults: [Employee] = []
     
@@ -38,14 +46,18 @@ final class EmployeeListViewModel: ObservableObject {
     @MainActor
     /// Try to fetch data from service
     func fetchEmployees() async {
+        isLoading = true
+        isError = false
         do {
-            isLoading = true
             employeeCache.add(employees: try await service.fetchEmployees(), key: cachedEmployeKey) // adding data to cache
             getEmployeesFromCache()
             isLoading = false
         }
         catch {
+            self.isError = true
+            self.state = .failed(error: error)
             print("Error happend : \(error)")
+            isLoading = false
         }
     }
 }

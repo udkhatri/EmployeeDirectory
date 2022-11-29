@@ -66,6 +66,23 @@ struct EmployeeListView: View {
                 await viewModel.fetchEmployees()
             }
         }
+        .alert("Error",
+               isPresented: $viewModel.isError,
+               presenting: viewModel.state){
+            detail in Button("Retry"){
+                Task{
+                    await viewModel.fetchEmployees()
+                }
+            }
+            Button("Cancel"){
+                
+            }
+        } message: { detail in
+            if case let .failed(error) = detail {
+                Text(error.localizedDescription)
+            }
+        }
+        
     }
 }
 

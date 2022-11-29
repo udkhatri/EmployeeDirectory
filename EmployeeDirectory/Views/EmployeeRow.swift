@@ -26,6 +26,7 @@ struct EmployeeRow: View {
                     Image(systemName: "person.circle.fill")
                         .resizable()
                         .cornerRadius(30)
+                        .foregroundColor(.blue)
                         .shadow(radius: 3, x: 2, y: 3)
                         .frame(width: 60, height: 60 )
                 } else {
