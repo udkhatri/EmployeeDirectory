@@ -29,14 +29,14 @@ struct EmployeeList: Decodable {
 struct Employee: Identifiable, Decodable {
     var id: String { uuid }
     let uuid: String
-    let fullName: String
-    let phoneNumber: String?
-    let emailAddress: String
+    let full_name: String
+    let phone_number: String?
+    let email_address: String
     let biography: String?
-    let photoUrlSmall: String?
-    let photoUrlLarge: String?
+    let photo_url_small: String?
+    let photo_url_large: String?
     let team: String
-    let employeeType: EmployeeType
+    let employee_type: EmployeeType
     
     /// Enum handling employee type constants
     enum EmployeeType: String, Decodable {

@@ -20,7 +20,6 @@ struct EmployeeListService: EmployeeListServiceType {
     
     func fetch<T: Decodable>(type: T.Type, from urlString: String) async throws -> T? {
         guard let url = URL(string: urlString) else {
-            print("Bad one....")
             throw ApiError.invalidRequest("Unexpected server response")
         }
         let (data, response) = try await URLSession

@@ -35,14 +35,15 @@ final class EmployeeListViewModel: ObservableObject {
     }
     
     func filterSearchResults() {
-        searchResults = employees.filter({ $0.fullName.localizedCaseInsensitiveContains(searchTerm)})
+        searchResults = employees.filter({ $0.full_name.localizedCaseInsensitiveContains(searchTerm)})
     }
     /// getting data from cache and storing it to employee list
     func getEmployeesFromCache(){
         employees = employeeCache.get(key: cachedEmployeKey) ?? []
-        print("employees from cached list", employees)
     }
-    
+    func removeCache(){
+        employeeCache.remove(key: cachedEmployeKey)
+    }
     @MainActor
     /// Try to fetch data from service
     func fetchEmployees() async {

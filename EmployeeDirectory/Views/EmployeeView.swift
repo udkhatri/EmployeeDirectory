@@ -61,14 +61,14 @@ struct EmployeeView: View {
     
     var body: some View {
         VStack(alignment: .leading){
-            if EmployeeDetails.photoUrlLarge == nil {
+            if EmployeeDetails.photo_url_large == nil {
                 PlaceholderImageView(isNill:true)
             }else{
-                AsyncImage(url: URL(string: EmployeeDetails.photoUrlLarge!)) { image in
+                AsyncImage(url: URL(string: EmployeeDetails.photo_url_large!)) { image in
                     image
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                        .overlay(EmployeeName(Name: EmployeeDetails.fullName), alignment: .bottomLeading)
+                        .overlay(EmployeeName(Name: EmployeeDetails.full_name), alignment: .bottomLeading)
                 } placeholder: {
                     PlaceholderImageView(isNill:false)
                 }
@@ -81,16 +81,16 @@ struct EmployeeView: View {
                     Text(EmployeeDetails.biography ?? "" )
                         .padding(10)
                     HStack{
-                        InfoView(text: EmployeeDetails.employeeType.returnEmpType(), tintColor: Color.indigo)
+                        InfoView(text: EmployeeDetails.employee_type.returnEmpType(), tintColor: Color.indigo)
                         InfoView(text: EmployeeDetails.team, tintColor: Color.orange)
                     }
                     
                     // Contact Info section
                     TitleText(text: viewModel.contactInfotext)
                     // Phone number
-                    ContactInfoRow(icon: "phone.fill", content: EmployeeDetails.phoneNumber!, tintColor: Color(uiColor: .systemMint))
+                    ContactInfoRow(icon: "phone.fill", content: EmployeeDetails.phone_number!, tintColor: Color(uiColor: .systemMint))
                     // Email Id
-                    ContactInfoRow(icon: "envelope.fill", content: EmployeeDetails.emailAddress, tintColor: Color(uiColor: .systemBrown))
+                    ContactInfoRow(icon: "envelope.fill", content: EmployeeDetails.email_address, tintColor: Color(uiColor: .systemBrown))
                     
                     Spacer()
                 }

@@ -20,11 +20,9 @@ class EmployeeCacheManager {
     
     func add(employees: [Employee], key: String){
         employeeListCache.setObject(employees as NSArray, forKey: key as NSString)
-        print("Added to cache!")
     }
     func remove(key: String){
         employeeListCache.removeObject(forKey: key as NSString)
-        print("Cache cleared!")
     }
     func get(key:String) -> [Employee]? {
         return employeeListCache.object(forKey: key as NSString) as? [Employee]

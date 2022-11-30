@@ -14,7 +14,7 @@ struct EmployeeRow: View {
     var body: some View {
         NavigationLink( destination: EmployeeView(EmployeeDetails: employee)) {
         HStack{
-            AsyncImage(url: URL(string: employee.photoUrlSmall!)) { phase in
+            AsyncImage(url: URL(string: employee.photo_url_small!)) { phase in
                 if let image = phase.image {
                     image
                         .resizable()
@@ -34,7 +34,7 @@ struct EmployeeRow: View {
                 }
             }
             VStack(alignment: .leading) {
-                Text(employee.fullName)
+                Text(employee.full_name)
                     .foregroundColor(.accentColor)
                     .font(.headline)
                 Text("Team: \(employee.team)")
