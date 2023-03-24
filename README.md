@@ -3,7 +3,7 @@
   <h1>Employee Directory</h1>
   
   <p>
-    An iOS application using SwiftUI and by following MVVM structure in which I am fetching employee list data from the server and showing them on the list. Click on them will redirect to employee screen where more information regarding that employee is present.![image](https://user-images.githubusercontent.com/34532828/227415109-d3e9c17b-1309-4f5e-8747-820a00681172.png)
+    An iOS application using SwiftUI and by following MVVM structure in which I am fetching employee list data from the server and showing them on the list. Click on them will redirect to employee screen where more information regarding that employee is present.
 
   </p>
   
@@ -21,7 +21,7 @@
 
 <div align="center">
   
-https://user-images.githubusercontent.com/34532828/190877324-22be43ab-1442-4acd-8c8e-5919a4e71ff9.mp4
+https://user-images.githubusercontent.com/34532828/227416735-4dc41d9e-d32d-4052-ae9a-aca08d705fe3.mp4
 
 </div>
 
